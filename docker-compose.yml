@@ -39,6 +39,6 @@ services:
     networks:
       - web_network_vi
 networks:
-  web_network_se:
+  web_network_vi:
     name: lemp
     driver: bridge
