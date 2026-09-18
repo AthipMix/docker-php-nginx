@@ -13,7 +13,7 @@ services:
     restart: always
     # restart: unless-stopped
     networks:
-      - web_network_se
+      - web_network_vi
   php:
     depends_on:
       - db
@@ -25,7 +25,7 @@ services:
       - "9000"
     restart: always
     networks:
-      - web_network_se
+      - web_network_vi
   nginx:
     image: nginx:stable-alpine
     container_name: lemp_nginx
@@ -37,7 +37,7 @@ services:
       - "8828:80"
     restart: always
     networks:
-      - web_network_se
+      - web_network_vi
 networks:
   web_network_se:
     name: lemp
